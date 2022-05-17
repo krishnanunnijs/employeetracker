@@ -1,0 +1,38 @@
+<div class="container">
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="save()" #userForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="employee.name" class="form-control" id="name" name="name" placeholder="Enter employee name"
+          required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" [(ngModel)]="employee.email" class="form-control" id="email" name="email" placeholder="Enter employee email address"
+          required #email="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input type="text" [(ngModel)]="employee.designation" class="form-control" id="designation" name="designation" placeholder="Enter employee designation"
+          required #email="ngModel">
+      </div>
+
+      <!-- <div class="form-group">
+        <label for="designation">Designation</label>
+        <select [(ngModel)]="employee.designation" class="form-control" title="Select Designation">
+            <option value="null">--Designation--</option>
+            <option value="QE">QE</option>
+            <option value="BA">BA</option>
+            <option value="BE">BackEnd</option>
+            <option value="FE">FrontEnd</option>
+            <option value="DO">DevOps</option>
+          </select>
+      </div> -->
+
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+  </div>
+</div>
+</div>

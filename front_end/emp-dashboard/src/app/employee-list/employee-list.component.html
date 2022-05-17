@@ -1,0 +1,29 @@
+<div class="card my-5">
+  <ul class="text-center list-inline py-3">
+    <li class="list-inline-item"><a routerLink="/addEmployee" class="btn btn-info">Add Employee</a></li>
+  </ul>
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Email</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.designation }}</td>
+            <td><a href="mailto:{{ employee.email }}">{{ employee.email }}</a></td>
+            <td>Active</td>
+            <button class="btn btn-info" routerLink="['/employeeDetails',employee.id]" >Details</button>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
